@@ -16,7 +16,9 @@ node[:deploy].each do |application, deploy|
 
     source "resque-scheduler.conf.erb"
     variables({
-                  :env_vars => env_string
+                  :env_vars => env_string,
+                  :rails_env => deploy[:rails_env],
+                  :app_dir => "#{deploy[:deploy_to]}/current"
               })
     mode "0755"
   end
