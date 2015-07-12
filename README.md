@@ -4,6 +4,9 @@ This is a very simple cookbook to deploy resque scheduler on a simple instance a
 
 # Requirements
 
+The app needs to be loading the environment using dotenv. See 
+https://github.com/mattgibson/opsworks-dotenv
+
 # Usage
 
 In your custom layer, you must add this recipes to each stage
